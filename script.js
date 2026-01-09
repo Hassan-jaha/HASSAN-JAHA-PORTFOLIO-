@@ -131,4 +131,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(aboutText);
 });
-

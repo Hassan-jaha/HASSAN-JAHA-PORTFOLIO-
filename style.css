@@ -1000,4 +1000,102 @@ body.intro-playing * {
   transform: translateY(-2px);
 }
 
+/* ===============================
+   MOBILE RESET (CLEAN FIX)
+================================ */
+@media (max-width: 768px) {
 
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    margin: 0 1rem !important;
+    padding-top: 4rem !important;
+    min-height: auto !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  #profile {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 6rem;
+    height: auto !important;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto;
+  }
+
+  .section__pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .section__text__p2 {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+}
+@media (max-width: 768px) {
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    background: rgba(15, 32, 39, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-tags {
+    justify-content: center;
+    gap: 6px;
+  }
+
+}
+/* ===============================
+   FIX PROFILE UNDER FIXED NAVBAR
+================================ */
+@media (max-width: 768px) {
+
+  /* نعوّض ارتفاع navbar */
+  #profile {
+    padding-top: 9rem !important;
+  }
+
+}
+@media (max-width: 768px) {
+  #profile {
+    margin-top: 1rem;
+  }
+}
