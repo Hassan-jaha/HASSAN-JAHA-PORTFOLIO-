@@ -1,121 +1,310 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
+/* ===============================
+   GLOBAL MOBILE RESET
+================================ */
+* {
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 1200px) {
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   MOBILE - 768px
+================================ */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  nav {
+    padding: 1rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
+
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
-  .nav-links {
+
+  /* PROFILE */
+  #profile {
     flex-direction: column;
-    gap: 0.5rem;
+    padding-top: 6rem;
     text-align: center;
   }
+
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 220px;
+    margin: 0 auto 1rem;
+  }
+
+  .section__text {
+    align-items: center;
+  }
+
+  /* ABOUT */
+  .about-ui {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-containers {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .details-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .details-container .icon {
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+  /* EXPERIENCE */
+  .experience-details-container {
+    padding: 0 1rem;
+  }
+
+  .article-container {
+    grid-template-columns: 1fr;
+  }
+
+  article {
     justify-content: center;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+
+  /* PROJECTS */
+  .about-containers {
+    flex-direction: column;
   }
-  .title {
-    font-size: 2rem;
+
+  .project-img {
+    width: 100%;
   }
-  .text-container {
-    text-align: justify;
+
+  .project-tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* CONTACT */
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* FOOTER */
+  footer nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
-@media (max-width: 480px) {
+/* ===============================
+   ABOUT SECTION - MOBILE FIX
+================================ */
+@media (max-width: 768px) {
 
-  .title {
-    font-size: 1.8rem;
+  #about {
+    padding: 3rem 1.5rem;
     text-align: center;
   }
 
-  .section__text__p2 {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-
-  .btn-container {
+  .about-ui {
     flex-direction: column;
-    gap: 0.8rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* IMAGE */
+  .about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-pic {
+    width: 220px;
+    height: auto;
+  }
+
+  /* CONTENT */
+  .about-content {
+    width: 100%;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* EXPERIENCE & EDUCATION CARDS */
+  .details-container {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .details-container .icon {
+    display: block;
+    margin: 0 auto 0.75rem;
+  }
+
+  .details-container h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* TEXT */
+  .about-text {
+    margin-top: 1.5rem;
+  }
+
+  .about-summary {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+/* ===============================
+   ABOUT SECTION – CLEAN MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  #about {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  /* GLOBAL LAYOUT */
+  .about-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* IMAGE */
+  .about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-pic {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* CONTENT */
+  .about-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* EXPERIENCE + EDUCATION */
+  .about-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  /* ICON */
+  .details-container .icon {
+    display: block;
+    margin: 0 auto 0.75rem;
+  }
+
+  /* TITLE */
+  .details-container h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* TEXT */
+  .details-container p {
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+
+  /* ABOUT TEXT */
+  .about-text {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-summary {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.7;
+  }
+}
+@media (max-width: 768px) {
+
+  /* EDUCATION TEXT FIX */
+  .details-container p {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* HERO FIX */
+  #profile {
+    margin-top: 4.5rem;
+    padding-top: 2rem;
+  }
+
+  #desktop-nav {
+    height: 4rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* PROJECTS CENTER */
+  #projects .about-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projects .details-container {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
   }
 
   .project-img {
@@ -123,42 +312,192 @@
     height: auto;
   }
 
-  .details-container {
-    padding: 1.2rem;
+  .project-tags {
+    justify-content: center;
+  }
+
+}
+@media (max-width: 768px) {
+  #profile {
+    margin-top: 120px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (max-width: 768px) {
 
-  .about-containers,
-  .experience-details-container {
-    gap: 1.5rem;
-  }
+  /* ===== EDUCATION & EXPERIENCE ===== */
 
   .details-container {
-    flex: 1 1 45%;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
   }
 
-  .project-img {
+  .details-container img.icon {
+    display: block;
+    margin: 0 auto 0.8rem;
+  }
+
+  .details-container h3 {
+    text-align: center;
+  }
+
+  .details-container p {
+    text-align: center;
+    margin: 0.3rem auto;
+    max-width: 260px;
+    line-height: 1.5;
+  }
+
+}
+/* ===== FORCE CENTER EDUCATION TEXT (MOBILE) ===== */
+@media (max-width: 768px) {
+
+  #about .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .details-container p {
+    width: 100%;
+    max-width: 260px;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.6;
+    white-space: normal;
+  }
+
+}
+/* ===== FIX PROFILE UNDER NAVBAR (MOBILE) ===== */
+@media (max-width: 768px) {
+
+  /* نعطي navbar ارتفاع ثابت */
+  #hamburger-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: transparent;
+    z-index: 1000;
+  }
+
+  /* نزيح profile لتحت navbar */
+  #profile {
+    padding-top: 6.5rem !important;
+    margin-top: 0 !important;
+  }
+
+}
+/* ===============================
+   FOOTER CENTER FIX
+================================ */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 4rem;
+  padding: 2.5rem 1rem 3rem;
+  gap: 1.2rem;
+}
+
+/* nav وسط */
+footer nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* links وسط و منسقين */
+footer .nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0;
+}
+
+/* copyright تحت */
+footer p {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}
+/* ===== FOOTER SPACING FIX ===== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 4rem;
+  padding: 3rem 1rem;
+}
+
+/* nav ديال footer */
+footer nav {
+  margin-bottom: 1.5rem; /* المسافة بين links و copyright */
+}
+
+/* copyright */
+footer p {
+  margin-top: 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+/* ===============================
+   MOBILE FIX (SAFE – NO STYLE BREAK)
+================================ */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Background stays calm */
+  #particles-js {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  /* PROFILE spacing under navbar */
+  #profile {
+    padding-top: 8.5rem;
+  }
+
+  /* Footer clean */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+
+  /* Prevent horizontal move */
+  section {
     max-width: 100%;
   }
 }
-@media (min-width: 1025px) {
-
-  section {
-    max-width: 1200px;
-  }
-
-  .about-containers {
-    gap: 2.5rem;
-  }
-}
-@media (min-width: 1600px) {
-
-  section {
-    max-width: 1400px;
-  }
-
-  html {
-    font-size: 18px;
+/* ===============================
+   FIX EDUCATION TEXT MOBILE
+================================ */
+@media (max-width: 768px) {
+  .details-container p,
+  .details-container h3 {
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
   }
 }

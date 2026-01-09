@@ -159,3 +159,76 @@ article {
     transition: none !important;
   }
 }
+/* ========================= */
+/* MOBILE RESPONSIVE FIX */
+/* ========================= */
+
+@media screen and (max-width: 768px) {
+
+  /* ===== HERO ===== */
+  #profile {
+    margin-top: 5rem !important;
+    padding-top: 2rem !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #profile .section__pic-container {
+    width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-ui {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 220px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+  }
+
+  .details-container p {
+    margin: 0.3rem auto;
+    max-width: 300px;
+    line-height: 1.6;
+  }
+
+  /* ===== PROJECTS ===== */
+  #projects .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projects .details-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}

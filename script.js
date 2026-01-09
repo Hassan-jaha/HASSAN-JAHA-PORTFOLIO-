@@ -131,3 +131,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(aboutText);
 });
+document.body.style.overflowY = "auto";
